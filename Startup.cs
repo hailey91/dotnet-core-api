@@ -80,7 +80,7 @@ namespace TodoApi
 
             app.UseAuthorization();
 
-            /*SecretClientOptions options = new SecretClientOptions()
+            SecretClientOptions options = new SecretClientOptions()
             {
                 Retry =
                 {
@@ -90,11 +90,11 @@ namespace TodoApi
                     Mode = RetryMode.Exponential
                 }
             };
-            var client = new SecretClient(new Uri("https://myKV9898.vault.azure.net/"), new DefaultAzureCredential(),options);
+            var client = new SecretClient(new Uri("https://mykeyvault91.vault.azure.net/"), new DefaultAzureCredential(),options);
             
             KeyVaultSecret secret = client.GetSecret("AppSecret");
             
-            string secretValue = secret.Value;*/
+            string secretValue = secret.Value;
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
